@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const schema = mongoose.Schema({
   description: { type: String, required: true },
@@ -14,4 +14,4 @@ const schema = mongoose.Schema({
 
 const TransactionModel = mongoose.model('transaction', schema);
 
-module.exports = TransactionModel;
+export default TransactionModel;

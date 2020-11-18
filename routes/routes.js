@@ -1,11 +1,12 @@
-const express = require('express');
-const transactionRouter = express.Router();
-const {
+import express from 'express';
+
+const transactionRouter = express();
+import {
   getPeriodTransactions,
   create,
   update,
   remove,
-} = require('../services/transactionService');
+} from '../services/transactionService.js';
 
 transactionRouter
   .route('/')
@@ -14,4 +15,4 @@ transactionRouter
   .put(update)
   .delete(remove);
 
-module.exports = transactionRouter;
+export default transactionRouter;
